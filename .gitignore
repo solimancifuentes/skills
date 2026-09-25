@@ -1,0 +1,43 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.netrc
+.pypirc
+.aws/
+.ssh/
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+
+# Local agent state
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/skills-lock.json
+
+# Dependencies and generated files
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+.cache/
+dist/
+build/
+
+# Editor and operating system files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
