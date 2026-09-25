@@ -6,7 +6,7 @@ No skills have been added yet. I'll choose which ones to publish as the collecti
 
 ## Install
 
-Once skills are available, install them with the [skills CLI](https://github.com/vercel-labs/skills). You'll need Node.js and npm, which provides `npx`.
+Once skills are available, install them with the [skills CLI](https://github.com/vercel-labs/skills). The current CLI requires Node.js 22.20.0 or later and npm, which provides `npx`.
 
 ```sh
 npx skills add solimancifuentes/skills
