@@ -1,0 +1,99 @@
+{
+  "version": "2.0",
+  "minimum_words": 80,
+  "provisional_below_words": 200,
+  "minimum_coverage": 70,
+  "dimensions": {
+    "substance": {
+      "label": "Substance and specificity",
+      "weight": 20
+    },
+    "grounding": {
+      "label": "Grounding and epistemic discipline",
+      "weight": 20
+    },
+    "diction": {
+      "label": "Diction and precision",
+      "weight": 15
+    },
+    "rhetoric": {
+      "label": "Rhetorical structure",
+      "weight": 10
+    },
+    "rhythm": {
+      "label": "Rhythm and flow",
+      "weight": 10
+    },
+    "clarity": {
+      "label": "Clarity and information load",
+      "weight": 10
+    },
+    "fidelity": {
+      "label": "Voice and editorial fidelity",
+      "weight": 10
+    },
+    "presentation": {
+      "label": "Presentation and economy",
+      "weight": 5
+    }
+  },
+  "patterns": {
+    "P01": "substance",
+    "P02": "substance",
+    "P03": "substance",
+    "P04": "substance",
+    "P05": "grounding",
+    "P06": "rhetoric",
+    "P07": "rhetoric",
+    "P08": "rhetoric",
+    "P09": "presentation",
+    "P10": "rhetoric",
+    "P11": "rhetoric",
+    "P12": "rhetoric",
+    "P13": "rhetoric",
+    "P14": "rhetoric",
+    "P15": "grounding",
+    "P16": "rhetoric",
+    "P17": "rhetoric",
+    "P18": "rhythm",
+    "P19": "diction",
+    "P20": "rhetoric",
+    "P21": "diction",
+    "P22": "diction",
+    "P23": "diction",
+    "P24": "diction",
+    "P25": "diction",
+    "P26": "diction",
+    "P27": "rhythm",
+    "P28": "rhythm",
+    "P29": "clarity",
+    "P30": "clarity",
+    "P31": "clarity",
+    "P32": "clarity",
+    "P33": "substance",
+    "P34": "clarity",
+    "P35": "clarity",
+    "P36": "grounding",
+    "P37": "presentation",
+    "P38": "presentation",
+    "P39": "presentation",
+    "P40": "rhetoric",
+    "P41": "presentation",
+    "P42": "presentation",
+    "P43": "substance",
+    "P44": "presentation",
+    "P45": "presentation",
+    "P46": "substance",
+    "P47": "presentation",
+    "P48": "fidelity",
+    "P49": "fidelity",
+    "P50": "fidelity",
+    "P51": "fidelity",
+    "P52": "fidelity",
+    "P53": "grounding",
+    "P54": "grounding",
+    "P55": "grounding",
+    "P56": "grounding",
+    "P57": "grounding"
+  }
+}

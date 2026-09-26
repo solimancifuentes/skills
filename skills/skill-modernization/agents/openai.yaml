@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Modernization Cycle"
+  short_description: "Review and improve skills using current evidence"
+  default_prompt: "Use $skill-modernization to review the specified skills against current evidence and recommend focused improvements."

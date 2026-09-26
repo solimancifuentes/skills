@@ -1,0 +1,4 @@
+interface:
+  display_name: "SPARC"
+  short_description: "Calibrate assurance from concrete effects"
+  default_prompt: "Use $sparc to calibrate assurance from concrete effects and apply the least process that safely fits the task-bound action."

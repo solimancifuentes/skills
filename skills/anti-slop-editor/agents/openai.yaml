@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-Slop Editor"
+  short_description: "Edit prose for clarity while preserving meaning"
+  default_prompt: "Use $anti-slop-editor to revise this passage into clear, direct prose while preserving its meaning and intended tone."

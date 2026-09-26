@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Intelligence Profile"
+  short_description: "Research companies with sourced intelligence"
+  default_prompt: "Use $company-intelligence-profile to research this company and produce a concise, source-backed profile."

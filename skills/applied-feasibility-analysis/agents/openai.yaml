@@ -1,0 +1,4 @@
+interface:
+  display_name: "Applied Feasibility Analysis"
+  short_description: "Evaluate ideas or business practices for a project"
+  default_prompt: "Use $applied-feasibility-analysis to evaluate a bounded external mechanism or relevant company/product surfaces against my project's evidence and constraints."

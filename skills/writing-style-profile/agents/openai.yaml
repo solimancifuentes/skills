@@ -1,0 +1,3 @@
+interface:
+  display_name: "Writing Style Profile"
+  short_description: "Analyze writing samples and reproduce their style"
