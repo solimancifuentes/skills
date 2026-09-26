@@ -51,6 +51,8 @@ Weights remain: substance 20, grounding 20, diction 15, rhetoric 10, rhythm 10, 
 
 Withhold a requested index below 80 assessed whitespace-delimited words, below 70/100 assessed dimension weight, when word counts are unreliable, or when a pattern or dimension remains `not_checked`. From 80–199 words an otherwise eligible index is provisional. These are operational safeguards, not validated accuracy thresholds. Without an eligible requested index, totals **and** numeric contributions are null. Qualitative findings and profiles remain available.
 
+Count each original whitespace-delimited word once if any of its characters remain in scope. A fully excluded word contributes zero. Exclusions preserve the original word boundaries: removing `[aside]` from `foo[aside]bar` leaves one word, while removing ` [aside] ` from `foo [aside] bar` leaves two. Exclusions cannot increase the word count.
+
 Supported impact-4 grounding/fidelity findings appear in `critical_findings` regardless of index request, eligibility, or value. Put their consequences beside the principal result. Other consequential findings also deserve prominence. This list does not certify overall readiness or define all possible serious problems.
 
 ## Assessment JSON

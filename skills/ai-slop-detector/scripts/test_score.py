@@ -211,6 +211,54 @@ class CalculatorTests(unittest.TestCase):
         data["exclusions"].append({"quote": "w000 w001", "reason": "Second excluded example"})
         self.invalid(data, "overlaps another exclusion")
 
+    def test_partial_word_exclusions_preserve_sample_thresholds(self):
+        for words, status in ((79, "withheld"), (80, "provisional"), (199, "provisional"), (200, "reported")):
+            with self.subTest(words=words):
+                data = assessment(words - 1)
+                data["text"] += " foo[aside]bar"
+                finding(data)
+                data["exclusions"] = [{"quote": "[aside]", "reason": "Inline annotation"}]
+                result = score.assess(data)
+                self.assertEqual(result["assessed_word_count"], words)
+                self.assertEqual(result["index"]["status"], status)
+                if words < 80:
+                    self.no_index_numbers(result)
+
+    def test_exclusions_preserve_original_word_boundaries(self):
+        cases = (
+            ("foo[aside]bar", "[aside]", 1),
+            ("foo [aside] bar", " [aside] ", 2),
+            ("foo\t[aside]\nbar", "\t[aside]\n", 2),
+            ("foo\u00a0[aside]\u2003bar", "\u00a0[aside]\u2003", 2),
+            ("abc def", "bc d", 2),
+            ("prefixword", "prefix", 1),
+            ("wordsuffix", "suffix", 1),
+            ("[aside]", "[aside]", 0),
+        )
+        for text, quote, expected in cases:
+            with self.subTest(text=text, quote=quote):
+                data = assessment()
+                data["text"] = text
+                data["exclusions"] = [{"quote": quote, "reason": "Excluded fixture content"}]
+                result = score.assess(data)
+                self.assertEqual(result["assessed_word_count"], expected)
+                self.no_index_numbers(result)
+
+    def test_touching_exclusions_are_order_independent(self):
+        cases = (
+            ("foo[one][two]bar tail", ("[one]", "[two]"), 2),
+            ("foobar tail", ("foo", "bar"), 1),
+        )
+        for text, quotes, expected in cases:
+            for order in (quotes, quotes[::-1]):
+                with self.subTest(text=text, order=order):
+                    data = assessment()
+                    data["text"] = text
+                    data["exclusions"] = [{"quote": quote, "reason": "Excluded fixture content"}
+                                          for quote in order]
+                    result = score.assess(data)
+                    self.assertEqual(result["assessed_word_count"], expected)
+
     def test_evidence_may_not_overlap_excluded_text(self):
         data = assessment()
         finding(data, quote="w000 w001")

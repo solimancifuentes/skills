@@ -54,7 +54,7 @@ The canonical format is a [standard skill folder](https://agentskills.io/specifi
 
 These are documented integration routes, not a claim of equal behavior across models. Distinguish package installation, instruction behavior, and live tool execution when reporting compatibility. Missing capabilities must remain visible in the result.
 
-Local checks on September 25, 2026 used skills CLI 1.7.0 and Node.js 24.14.1 to discover and copy all eleven packages into a temporary Codex project, including their licenses and references. The detector's 44 software tests passed with Python 3.14.7. Bounded GPT-6 Astra trials exercised reporting, invocation-setting preservation, read-only recommendations, writing-skill composition, and private report content. Other host runtimes and live integrations have not been tested for this release.
+Local checks on September 25, 2026 used skills CLI 1.7.0 and Node.js 24.14.1 to discover and copy all eleven packages into a temporary Codex project, including their licenses and references. The detector's 47 software tests passed with Python 3.14.7. Bounded GPT-6 Astra trials exercised reporting, invocation-setting preservation, read-only recommendations, writing-skill composition, and private report content. Other host runtimes and live integrations have not been tested for this release.
 
 ## Limits and private information
 

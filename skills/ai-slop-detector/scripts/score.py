@@ -392,7 +392,9 @@ def assess(data, rubric=None):
                           if value["status"] == "assessed")
     assessed_text = list(text)
     for exclusion in exclusions:
-        assessed_text[exclusion["start"]:exclusion["end"]] = " " * (exclusion["end"] - exclusion["start"])
+        start, end = exclusion["start"], exclusion["end"]
+        # Preserve original word boundaries and positions for later exclusions.
+        assessed_text[start:end] = [char if char.isspace() else "" for char in text[start:end]]
     word_count = len("".join(assessed_text).split())
     ineligibility_reasons = []
     if not context["word_count_reliable"]:
