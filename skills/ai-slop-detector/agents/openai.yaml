@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Slop Detector"
+  short_description: "Audit writing thoroughly and report key findings"
+  default_prompt: "Use $ai-slop-detector to assess this text thoroughly and return concise findings with examples and material limits."

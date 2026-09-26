@@ -1,0 +1,4 @@
+interface:
+  display_name: "Customize Framer Template"
+  short_description: "Adapt Framer templates with proportional safeguards"
+  default_prompt: "Use $customize-framer-template to adapt this existing Framer template to my business or project while preserving its visual system and matching safeguards to each change's impact."

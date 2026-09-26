@@ -1,0 +1,4 @@
+interface:
+  display_name: "Process Debt Audit"
+  short_description: "Diagnose process debt and design lean workflows"
+  default_prompt: "Use $process-debt-audit to diagnose this project's process debt and propose a minimum-sufficient workflow."

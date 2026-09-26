@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Extraction and Reconstruction"
+  short_description: "Extract compact, portable design systems from evidence"
+  default_prompt: "Use $design-system-extraction to inspect this website and produce a compact, platform-agnostic design system with reusable tokens and implementation rules for humans and AI agents."
