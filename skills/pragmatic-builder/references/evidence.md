@@ -34,6 +34,22 @@ General nonfiction, personal commentary, humor, forceful opinions, and reflectio
 
 English is evidenced. Other languages and unrelated genres remain provisional transfers, with the assignment and language's natural usage taking precedence. The sources do not establish cross-model reliability, author-reviewed fidelity, or a percentage match. Source comparison supports bounded observations; behavioral trials can test decisions but cannot establish authentic authorship.
 
+## Adapted composition mechanisms
+
+The original-composition guidance is editorial design, informed by the public skill instructions below. These mechanisms are not additional observed habits of the source articles, and inspecting instructions does not demonstrate their effectiveness. Links pin the inspected versions; the package contains original adaptations rather than copied instructions and requires none of these skills at runtime.
+
+| Public attribution | Mechanism considered and adaptation |
+| --- | --- |
+| Matt Pocock, [writing-fragments](https://github.com/mattpocock/skills/blob/d81f3a183412e71a5b1e84ca21bc1a35eea03a60/skills/in-progress/writing-fragments/SKILL.md) | Discover useful material before imposing an outline. Here, use already available material and ask only consequential questions; no compulsory interview or material-freezing phase. |
+| Matt Pocock, [writing-shape](https://github.com/mattpocock/skills/blob/d81f3a183412e71a5b1e84ca21bc1a35eea03a60/skills/in-progress/writing-shape/SKILL.md) | Consider distinct directions and relationships among ideas. Here, select a supported angle internally unless collaboration is requested; coined concepts and approval stages are optional. |
+| Matt Pocock, [writing-beats](https://github.com/mattpocock/skills/blob/d81f3a183412e71a5b1e84ca21bc1a35eea03a60/skills/in-progress/writing-beats/SKILL.md) | Check what the reader needs to know and how passages advance understanding. Here, use a lightweight dependency and progression check that accommodates narrative suspense and digressions. |
+| Corey Haines, [content-strategy](https://github.com/coreyhaines31/marketingskills/blob/5b2c0007766c6a1cf1d53fd8fc73e979e0821022/skills/content-strategy/SKILL.md) and [copywriting](https://github.com/coreyhaines31/marketingskills/blob/5b2c0007766c6a1cf1d53fd8fc73e979e0821022/skills/copywriting/SKILL.md) | Use context, audience needs, and specific material to give writing a reason to exist. Here, reader interest can be understanding, recognition, reconsideration, or feeling; conversion, search performance, and calls to action are not general nonfiction requirements. |
+| Corey Haines, [copy-editing](https://github.com/coreyhaines31/marketingskills/blob/5b2c0007766c6a1cf1d53fd8fc73e979e0821022/skills/copy-editing/SKILL.md) | Separate substantive and line-level revision concerns. Here, check evidence and development before polishing, using only passes the assignment warrants. |
+
+The three Matt Pocock skills were in the repository's [in-progress collection](https://github.com/mattpocock/skills/blob/d81f3a183412e71a5b1e84ca21bc1a35eea03a60/skills/in-progress/README.md), described as experimental and subject to change. That status limits any claim that they supply an established workflow. Marketing-oriented skills were reviewed as instructions for their own purposes, not general standards for nonfiction.
+
+Supported original analysis, explicit research limits, labeled hypotheticals, the interest criterion, and checking assertions against source material are editorial choices for this skill's expanded scope. They do not justify invented speaker convictions or experience. The [evaluation reference](evaluation.md) defines proportionate comparison procedures; it is a protocol, not evidence that its cases have passed. The sustained [examples](examples.md) use invented teaching packets and illustrate development and repair, not measured engagement or reliable compliance.
+
 ## Historical evaluation report
 
 The skill author reports six historical trials conducted by an independent subagent across explanation, uncertain evidence, opinion, personal humor, correspondence, and revision. The briefs, outputs, and review records are not bundled, and those trials have not been reproduced for this reference. Treat this as an author-reported development history, not independently inspectable validation or evidence of current performance. The [calibration examples](examples.md) are synthetic teaching material, not trial records.
