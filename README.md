@@ -15,7 +15,7 @@ The central home for the AI agent skills I use, maintained by [Soliman Cifuentes
 | [pragmatic-builder](skills/pragmatic-builder/README.md) | Concrete, candid nonfiction | Topic, draft, context, or evidence → original prose, revision, or requested feedback | Text and context access; optional research access |
 | [process-debt-audit](skills/process-debt-audit/README.md) | Finding unnecessary process | Project history and operational evidence → read-only diagnosis and recommendations | Supplied records or authorized project access |
 | [skill-modernization](skills/skill-modernization/README.md) | Reviewing and improving skills | Skill source and relevant evidence → findings or authorized revisions | Source access; editing, current documentation, and validation as needed |
-| [sparc](skills/sparc/README.md) | Matching assurance to an action's effects | Task, effects, and authority → proportionate workflow and checks | Context access; operational tools only for authorized execution |
+| [sparc](skills/sparc/README.md) | Model routing, coordination, and proportionate assurance | Task, constraints, effects, and authority → suitable execution strategy and checks | Context access; native routing when available; operational tools only for authorized execution |
 | [writing-style-profile](skills/writing-style-profile/README.md) | Describing and applying a writing style | Authorized samples and brief → profile, draft, or evaluation | Sample and reference access; optional file output |
 
 The writing skills serve different tasks. An edit does not require a detector audit, and using an existing voice does not require extracting a new profile. When combining skills, the assignment and selected voice take precedence over generic cleanup preferences.
