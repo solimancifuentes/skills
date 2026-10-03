@@ -1,11 +1,11 @@
 ---
 name: sparc
-description: "SPARC (Spec-Driven Planning, Authority-Aware Routing, and Coordination) calibrates assurance from concrete effects, preserves task-bound authority, reviews plans and lifecycle state, and qualifies recovery for consequential work across projects and agent surfaces. Use when governance, approval, routing, failure recovery, review depth, or lifecycle effects materially affect the next action. Do not use for ordinary implementation, routine code review, or generic version-control help unless those concerns are material."
+description: "SPARC (Spec-Driven Planning, Authority-Aware Routing, and Coordination) matches assurance to concrete effects and guides model selection, consultation, delegation, and parallel work within task-bound authority. Use when routing or coordination materially affects quality, latency, or cost, or when governance, review, recovery, or lifecycle effects change the next action. Do not use for ordinary implementation, routine code review, or generic version-control help when those concerns are immaterial."
 ---
 
 # SPARC
 
-Coordinate project work when state, authority, routing, or lifecycle effects materially affect what may happen next. Apply the least process that safely proves the requested result.
+Coordinate project work when state, authority, routing, or lifecycle effects materially affect what may happen next. Choose execution and assurance that meet the requested outcome with justified cost and coordination. Apply the least process that safely proves the result.
 
 ## 1. Ground in authority and evidence
 
@@ -79,15 +79,35 @@ Plan approval is a quality finding, not mutation authority. If the original requ
 
 Use the smallest suitable native surface. Add wrappers, PTYs, transports, or orchestration only for a concrete capability or isolation requirement and validate the added boundary when its behavior matters.
 
-Select model strength, reasoning, speed, lifecycle controls, and orchestration to meet the required quality within the user's constraints, then balance total cost per successful task, latency, retries, and review effort. Honor explicit model and control choices; otherwise retain a suitable active configuration unless a change has a concrete expected benefit. If an explicit choice is unavailable or cannot meet a material requirement, explain the constraint and resolve only the missing decision. Use representative task evidence when available; distinguish measured results from estimates and unmeasured tradeoffs. Do not require a benchmark for ordinary work.
+### Choose an execution strategy
 
-Strong models and high reasoning are appropriate when they materially improve difficult work, not merely because work is lengthy, labeled Deep, or contains many procedural checks. Use supporting agents only when substantial independent workstreams offer more expected quality or elapsed-time benefit than coordination cost. Evidence formatting, duplicate verification, operator-record preparation, prompt restatement, and procedural ceremony are not valuable independent workstreams. Keep one integration owner and serialize overlapping writes.
+Before routing, inspect controlling instructions and the active tool contract. Establish the supported model and reasoning choices, callable consultation or delegation controls, context inheritance, permissions, shared resources, concurrency limits, and available usage accounting that affect the decision. A documented API feature or visible picker does not establish an agent-callable control. Discover only what the next useful route requires; do not turn this into a mandatory inventory.
+
+Choose among these distinct routes:
+
+- **Direct work:** continue with the current agent for small or tightly coupled work. Prefer deterministic tools and concurrent tool calls for mechanical stages that do not need separate model judgment.
+- **Primary-model change:** use a different supported model or reasoning setting when a substantial part of the remaining work needs it. Preserve explicit user choices and change only controls the environment permits; recommend an operator action when the agent cannot execute it.
+- **Consultation:** ask a suitable stronger or specialized model a bounded question when an unresolved judgment, conflicting evidence, or recurring failure justifies the cost. Prefer a read-only consultation when advice is sufficient. The coordinator evaluates the answer against evidence and retains execution responsibility; advice does not create authority or a mandatory endorsement gate.
+- **Delegated execution:** assign independently verifiable work to a suitable model with the tools and permissions it needs. Choose capability and effort for that assignment rather than copying the coordinator's settings by habit. A cheaper model is useful only when its expected result and verification costs fit the task.
+- **Ownership transfer:** hand off the remaining work only when supported and useful. Carry the accepted outcome, current state, constraints, authority, and completion criteria to the successor; make the new integration owner explicit. Returning a worker's answer is not an ownership transfer.
+
+Select model strength, reasoning, speed, and orchestration to meet the required quality within the user's constraints. Otherwise retain a suitable active configuration unless a change has a concrete expected benefit. Strong models and high reasoning are appropriate when they materially improve difficult work, not merely because work is lengthy or contains many procedural checks. Do not assume a fixed capability hierarchy across providers. If a chosen route is unavailable, continue directly or use supported delegation when adequate; explain a material limitation without inventing controls or bypassing restrictions.
+
+Compare total cost per successful outcome, including context sent to each model, worker and consultant activity, tools, retries, verification, and integration. Parallelism may reduce elapsed time while increasing aggregate tokens; a clean coordinator context or cheaper token rate does not establish lower workflow cost. Use representative task evidence and available accounting without inventing measurements or treating missing usage as zero. Do not require a benchmark for ordinary work.
+
+### Coordinate independent work
+
+Parallelize bounded work only when it can progress independently and the expected quality or elapsed-time benefit outweighs coordination, context, and verification costs. Independence alone does not justify workers; keep short checks together when delegation and integration would outweigh useful work. Check dependencies and shared files, sessions, tools, generated outputs, and external state. Keep one integration owner, serialize coupled work and overlapping mutations, and add isolation only for a concrete need. Evidence formatting, duplicate verification, prompt restatement, and procedural ceremony are not useful independent workstreams. A focused consultation may still be valuable without a substantial worker workstream.
+
+Reassess routing when new evidence changes difficulty, dependencies, or constraints; a worker drifts from its assignment; or attempts stop producing useful evidence. Narrow or redirect affected work, use a focused diagnostic or consultation when justified, reuse valid results, and stop obsolete branches through supported controls after reconciling any material effects. Avoid unchanged-state polling, duplicated investigation, and automatic escalation ladders. Stop when the accepted outcome passes; do not add stronger-model agreement as another completion gate.
 
 Read [OpenAI and Codex guidance](references/openai-codex.md) only when an OpenAI control materially affects the task. Read [Claude Code guidance](references/claude-code.md) only when Claude Code is the selected or proposed destination. These are optional host adapters. For other hosts, use available native controls and current official documentation; do not invent equivalents for unsupported features. Lifecycle modes and automatic permission review apply only when the host supports them and their activation is authorized. Read [change lifecycle guidance](references/change-lifecycle.md) for review objects, readiness mutation, integration, deletion, synchronization, or dependent work.
 
 ## 6. Keep prompts, evidence, and returns lean
 
 Provide a copyable prompt only when execution in another context is the next useful step or the user requests one. Carry only the outcome, task-specific authoritative context, allowed effects, material constraints, validation, stop conditions, and concise return that the destination lacks. Point to accessible canonical project instructions instead of restating generic agent behavior. Keep private records, account details, source paths, and raw conversations out of shared prompts unless needed and authorized for that destination.
+
+Give each consultant, worker, or successor a compact brief: one question or deliverable; necessary authoritative inputs and current state; material constraints and permitted actions; ownership boundaries; acceptance criteria; and the expected concise return. Include applicable user budgets and stopping conditions, and use enforceable work or output limits when supported. Request results, supporting evidence, uncertainty, and changed artifacts rather than raw intermediate logs. Preserve enough context to avoid losing requirements; choose fresh, partial, or inherited context according to need and actual context or caching costs. Reuse a suitable agent's context without carrying unrelated history.
 
 Require the smallest useful evidence format. Use a table only when multiple requirements map to different artifacts or validation sources and the table materially improves the decision. Do not request command counts, poll counts, byte offsets, payload hashes, full mutation inventories, or repeated unchanged-state evidence unless those facts are themselves material.
 
@@ -100,7 +120,7 @@ For repository mutations, report the requested result, validation, final cleanli
 1. Resolve controlling policy, current evidence, and the exact task envelope.
 2. Classify the next concrete action as Routine, Guarded, or Consequential.
 3. Add only controls justified by material effects, evidence, or policy.
-4. Load only references relevant to that action.
+4. Choose a supported execution strategy and load only references relevant to that action.
 5. Execute bounded work inside the envelope, including recoverable corrections and reruns.
 6. Validate the requested result and authoritative external effects.
 7. Return the result, material evidence, unresolved decisions, and the next action only when one remains.
