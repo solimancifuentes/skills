@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Articles"
+  short_description: "Draft, format, and deliver long-form X Articles"
+  default_prompt: "Use $x-articles to prepare a complete X Article with purposeful formatting and the requested delivery format."

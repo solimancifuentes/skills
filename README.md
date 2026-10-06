@@ -1,6 +1,6 @@
 # Skills
 
-The central home for the AI agent skills I use, maintained by [Soliman Cifuentes](https://github.com/solimancifuentes). These eleven skills cover writing, research, design, and agent workflows. Each folder contains a README with installation and usage details, the agent's instructions in `SKILL.md`, and any supporting resources.
+The central home for the AI agent skills I use, maintained by [Soliman Cifuentes](https://github.com/solimancifuentes). These twelve skills cover writing, research, design, and agent workflows. Each folder contains a README with installation and usage details, the agent's instructions in `SKILL.md`, and any supporting resources.
 
 ## The collection
 
@@ -17,6 +17,7 @@ The central home for the AI agent skills I use, maintained by [Soliman Cifuentes
 | [skill-modernization](skills/skill-modernization/README.md) | Reviewing and improving skills | Skill source and relevant evidence → findings or authorized revisions | Source access; editing, current documentation, and validation as needed |
 | [sparc](skills/sparc/README.md) | Model routing, coordination, and proportionate assurance | Task, constraints, effects, and authority → suitable execution strategy and checks | Context access; native routing when available; operational tools only for authorized execution |
 | [writing-style-profile](skills/writing-style-profile/README.md) | Describing and applying a writing style | Authorized samples and brief → profile, draft, or evaluation | Sample and reference access; optional file output |
+| [x-articles](skills/x-articles/README.md) | Preparing long-form X Articles | Topic, sources or draft → complete inline article, requested Markdown artifact or native draft | Text and source access; browsing, file writing or authorized editor access as needed |
 
 The writing skills serve different tasks. An edit does not require a detector audit, and using an existing voice does not require extracting a new profile. When combining skills, the assignment and selected voice take precedence over generic cleanup preferences.
 
