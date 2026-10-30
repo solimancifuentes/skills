@@ -17,13 +17,19 @@ If a capability is unavailable, continue the work it does not block and identify
 
 ## Develop the article
 
+When adapting an existing draft or workflow, establish the intended presentation from the current request and any supplied examples. Check whether inherited format restrictions exclude it; reconcile them under the applicable instruction hierarchy and make any material limitation explicit. Preserve facts, qualifications, protected wording and source destinations without automatically freezing every word or reducing adaptation to typography; retain exact wording where required.
+
 Start from the user's draft when one is supplied, or develop a supported angle from the topic and evidence. Provide enough orientation and explanation for the intended reader. Preserve useful definitions, relationships and examples when adapting or shortening; remove waste without removing the steps needed to follow the argument. Chronology, comparison, narrative and practical conclusions are choices, not a compulsory outline.
+
+Keep the requested voice or the supplied draft's voice; this skill imposes no default voice. Consult [optional voice modes](references/voice-modes.md) when Potato, sweet-potato or raw-potato is requested, including how to reconcile their presentation rules with the assignment. Other supplied voices remain equally valid, and no separate writing skill is required.
+
+Use sentence case for article titles and headings, and normal sentence capitalization for body prose, unless another casing is required. Preserve required casing in quotations, proper names, acronyms, identifiers and other exact text.
 
 Use headings at meaningful transitions, emphasis at consequential points, and paragraphs that keep connected reasoning intact. Choose each format for the work it does: a table can align comparable dimensions; code can show a mechanism; a quote can focus attention; media can supply evidence or useful context. A prose-only article can be appropriate. Do not force a hook, numeric title, cover asset, call to action, paragraph quota or every available feature into the piece.
 
 Consult [formatting options](references/formatting-options.md) when selecting or explaining a feature, representing it in a draft, or checking source coverage. It distinguishes official documentation from observed examples. Refresh current X guidance or inspect the relevant editor when a capability, limit, account access or state change matters; documentation silence does not prove a feature is unavailable.
 
-Keep claims supported and uncertainty attached to the claim it qualifies. Distinguish reported findings, creator claims, inference and illustration. A clear layout or a syntactically valid example is not evidence of reliable behavior or improved engagement.
+Keep claims supported and uncertainty attached to the claim it qualifies. Name the specific limitation and explain its consequence when material to the reader. Distinguish reported findings, creator claims, inference and illustration. Preserve qualifications that add information; do not append a stock disclaimer or repeat an explained limitation just to close a section. Let a section end when its explanation is complete. Add advice or an action only when supported by the argument and assignment. A clear layout or a syntactically valid example is not evidence of reliable behavior or improved engagement.
 
 ## Sources, posts and assets
 
@@ -39,4 +45,4 @@ Follow the requested format. For article-writing requests with no specified dest
 
 Consult [delivery guidance](references/delivery.md) for artifact structure, embed/media handoffs, native drafting and meaningful rendering checks. Keep the article distinct from any necessary production notes. Do not silently substitute a summary, proposed outline or formatting plan for requested article copy.
 
-Check factual and speaker fidelity, progression, link destinations, illustrative code or math, table meaning and the requested format. Inspect a native preview when accessible and relevant, including spacing, wide tables, code wrapping and media placement. Record only what was checked. Drafting does not authorize publication or unrelated external actions; changing an already published article can also affect its live state.
+Check whether the finished presentation fulfills the request alongside factual and speaker fidelity, progression, link destinations, illustrative code or math, and table meaning. Inspect a native preview when accessible and relevant, including spacing, wide tables, code wrapping and media placement. Record only what was checked. Drafting does not authorize publication or unrelated external actions; changing an already published article can also affect its live state.

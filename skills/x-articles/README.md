@@ -18,14 +18,20 @@ npx skills add solimancifuentes/skills --skill x-articles
 
 > Use X Articles to explain the available formatting options and how to hand off an article for X's editor.
 
+> Use X Articles in sweet-potato voice, with conventional article capitalization, descriptive headings and a comparison table where useful.
+
+> Use X Articles in raw-potato voice for engineering peers. Preserve the measurements, test conditions and uncertainty.
+
 Specify the audience, language, length, protected wording, source requirements or desired delivery mode when they matter. The skill uses the supplied brief without requiring an intake form.
+
+The optional [Potato voice modes](references/voice-modes.md) offer patient, audience-facing explanation in sweet-potato and direct engineer-to-engineer writing in raw-potato. Neither is a default for X Articles. When Potato is requested without a mode, it selects sweet-potato. Article titles and headings use sentence case, with normal sentence capitalization in the body, including these voice adaptations. Explicit casing requirements, such as strict sweet-potato's original lowercase presentation, take precedence. Requested article formatting can adapt the voice's presentation. The modes work without installing another skill.
 
 ## How it works
 
-1. Develop or preserve a supported argument in the requested voice.
+1. Reconcile the requested voice and presentation with inherited rules, then develop or preserve a supported argument without freezing unprotected prose.
 2. Select formatting for its explanatory purpose, using a source-labeled inventory of documented and demonstrated X features.
 3. Verify relevant post URLs, handles and assets when they are used, and place embeds beside the passages they inform.
-4. Deliver the requested article and any necessary insertion notes, then check fidelity and the accessible preview.
+4. Deliver the requested article and any necessary insertion notes, then check presentation suitability, fidelity and the accessible preview.
 
 Tables, code, math and media are optional. Platform recommendations do not impose a word-count reduction, heading cadence, compulsory question or call to action.
 
