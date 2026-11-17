@@ -1,0 +1,4 @@
+interface:
+  display_name: "slopx"
+  short_description: "Edit drafts for substance while keeping every fact"
+  default_prompt: "Use $slopx to edit this draft so it says something specific, and keep every fact intact."
