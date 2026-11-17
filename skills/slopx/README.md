@@ -4,9 +4,9 @@ Edit or review a draft so that it says something specific and true, with every f
 
 ## Installation
 
-```sh
-npx skills add solimancifuentes/skills --skill slopx
-```
+Use an inspected local copy of this repository at a revision you choose. Copy the whole `skills/slopx` directory into your agent's local skills directory, keeping `SKILL.md`, `references/`, `scripts/` and `agents/` together.
+
+The installed files contain the editing instructions and helper script. The helper uses Python's standard library and makes no network requests. Optional citation checks use the agent's read-only web tools under the content-handling rules in `SKILL.md`.
 
 ## Process
 
