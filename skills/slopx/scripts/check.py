@@ -46,7 +46,9 @@ CODE = re.compile(r"```.*?```|`[^`\n]+`", re.S)
 URL = re.compile(r"https?://[^\s<>\]\"']+")
 QUOTE = re.compile(r'"([^"\n]{2,300})"')
 # shortcut: numbers written as words ("three") are not seen, compare those by eye
-NUMBER = re.compile(r"[$€£]?\d+(?:[.,:/-]\d+)*%?")
+# a leading sign counts, so -50 and 50 differ; a hyphen inside a word or range ("COVID-19", "10-20") is not a sign
+SIGN = r"(?:(?<![\w.,:/])[-+−])?"
+NUMBER = re.compile(SIGN + r"[$€£]?" + SIGN + r"\d+(?:[.,:/-]\d+)*%?")
 NEED = re.compile(r"\[need:[^\]]*\]", re.I)
 
 
@@ -86,7 +88,7 @@ def facts(text):
     prose = CODE.sub(" ", text)
     links = [u.rstrip(".,;:!?)") for u in URL.findall(prose)]
     prose = URL.sub(lambda m: " " + m.group(0)[len(m.group(0).rstrip(".,;:!?)")):], prose)  # keep the sentence's own punctuation
-    numbers = [re.sub(r",(?=\d{3}(\D|$))", "", n) for n in NUMBER.findall(prose)]
+    numbers = [re.sub(r",(?=\d{3}(\D|$))", "", n).replace("−", "-") for n in NUMBER.findall(prose)]
     return {
         "numbers": numbers,
         "names": names(prose),
@@ -99,8 +101,16 @@ def facts(text):
 def hidden(text):
     out = []
     for ln, line in enumerate(text.splitlines(), 1):
+        in_flag = False  # subdivision flags (England, Scotland, Wales) are U+1F3F4 followed by tag characters
         for col, ch in enumerate(line, 1):
             cp = ord(ch)
+            if cp == 0x1F3F4:
+                in_flag = True
+                continue
+            if in_flag and 0xE0020 <= cp <= 0xE007F:
+                in_flag = cp != 0xE007F  # U+E007F ends the flag
+                continue
+            in_flag = False
             if cp == 0xFEFF and ln == 1 and col == 1:
                 continue  # a byte-order mark at the very start is normal
             inside_latin = 1 < col < len(line) and line[col - 2].isascii() and line[col - 2].isalpha() and line[col].isascii() and line[col].isalpha()
@@ -202,7 +212,14 @@ def selftest():
     assert "Gartner" in out and "onboarding took 6 weeks" in out and "make test" in out, out
     assert "12" not in out.split("names")[0], "numbers inside [need: ...] markers are ignored"
 
-    assert hidden("plain text, with an emoji \U0001F468‍\U0001F469 and نمی‌خواهم") == []
+    for b, a in [("The balance was -50 dollars.", "The balance was 50 dollars."), ("Margin moved +2%.", "Margin moved -2%."), ("It fell to −4 degrees.", "It fell to 4 degrees."), ("A loss of -$30.", "A loss of $30.")]:
+        assert diff(b, a)[1] > 0, (b, a)
+    assert diff("It fell to −4 degrees.", "It fell to -4 degrees.")[1] == 0, "a minus sign and a hyphen-minus are the same number"
+    assert facts("COVID-19 cases rose 10-20% in 2025-26, from -3 to +7.")[0]["numbers"] == ["19", "10-20%", "2025-26", "-3", "+7"]
+
+    flag = "\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F"
+    assert hidden("plain text, with an emoji \U0001F468‍\U0001F469, a flag " + flag + " and نمی‌خواهم") == []
+    assert len(hidden("a stray tag\U000E0041 character")) == 1
     assert len(hidden("zero​width and pаypal and joi‍ner")) == 3
     report = scan("Certainly! It's not about speed. It's about trust.\n\nSee https://x.test/?utm_source=chatgpt.com and [Company].")
     assert "tracking parameter at line 3" in report and "unfilled placeholder at line 3" in report, report
