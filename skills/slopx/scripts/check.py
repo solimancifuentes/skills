@@ -164,8 +164,7 @@ def scan(text):
         "shape",
         "  specifics (numbers and names) per 100 words: %.1f%s" % (specifics, "   <- under 1 usually means little is being said (S2)" if specifics < 1 and words >= 50 else ""),
         "  paragraphs: %d, median %d words%s" % (len(paragraphs), median, "   <- many very short paragraphs, see T1" if len(paragraphs) >= 6 and median <= 12 else ""),
-        # shortcut: the 3-per-1,000 and 300-word cutoffs follow the report's PUN-01 note and are not validated
-        "  dashes used as punctuation per 1,000 words: %.1f%s" % (dashes, "   <- dense, see P10" if dashes > 3 and words >= 300 else ""),
+        "  dashes used as punctuation per 1,000 words: %.1f%s" % (dashes, "   <- replace each one outside quotations and code, see P10" if dashes > 0 else ""),
         "  bold-label lines: %d%s" % (labels, "   <- see T2" if labels >= 3 else ""),
     ]
     return "\n".join(lines)

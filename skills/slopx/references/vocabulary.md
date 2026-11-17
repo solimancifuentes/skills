@@ -59,4 +59,4 @@ Do not edit these on sight, and never cite them as evidence about who wrote a te
 - Hedges: can, may, might, tends to, perhaps
 - Wordy but ordinary constructions: "in order to", "the fact that", "there is a"
 - A mix of casual and formal register
-- Em dashes in moderation
+- Em dashes in moderation, as a sign of who wrote a text (P10 still replaces them in an edit)
