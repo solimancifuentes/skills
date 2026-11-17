@@ -1,6 +1,6 @@
 # Skills
 
-The central home for the AI agent skills I use, maintained by [Soliman Cifuentes](https://github.com/solimancifuentes). These twelve skills cover writing, research, design, and agent workflows. Each folder contains a README with installation and usage details, the agent's instructions in `SKILL.md`, and any supporting resources.
+The central home for the AI agent skills I use, maintained by [Soliman Cifuentes](https://github.com/solimancifuentes). These thirteen skills cover writing, research, design, and agent workflows. Each folder contains a README with installation and usage details, the agent's instructions in `SKILL.md`, and any supporting resources.
 
 ## The collection
 
@@ -15,11 +15,12 @@ The central home for the AI agent skills I use, maintained by [Soliman Cifuentes
 | [pragmatic-builder](skills/pragmatic-builder/README.md) | Concrete, candid nonfiction | Topic, draft, context, or evidence → original prose, revision, or requested feedback | Text and context access; optional research access |
 | [process-debt-audit](skills/process-debt-audit/README.md) | Finding unnecessary process | Project history and operational evidence → read-only diagnosis and recommendations | Supplied records or authorized project access |
 | [skill-modernization](skills/skill-modernization/README.md) | Reviewing and improving skills | Skill source and relevant evidence → findings or authorized revisions | Source access; editing, current documentation, and validation as needed |
+| [slopx](skills/slopx/README.md) | Substance-first editing that keeps every fact | Draft and where it will go → edited text with short notes, or review findings without a rewrite | Text access; optional Python 3 helper; web access to check citations |
 | [sparc](skills/sparc/README.md) | Model routing, coordination, and proportionate assurance | Task, constraints, effects, and authority → suitable execution strategy and checks | Context access; native routing when available; operational tools only for authorized execution |
 | [writing-style-profile](skills/writing-style-profile/README.md) | Describing and applying a writing style | Authorized samples and brief → profile, draft, or evaluation | Sample and reference access; optional file output |
 | [x-articles](skills/x-articles/README.md) | Preparing long-form X Articles | Topic, sources or draft → complete inline article, requested Markdown artifact or native draft | Text and source access; browsing, file writing or authorized editor access as needed |
 
-The writing skills serve different tasks. An edit does not require a detector audit, and using an existing voice does not require extracting a new profile. When combining skills, the assignment and selected voice take precedence over generic cleanup preferences.
+The writing skills serve different tasks. An edit does not require a detector audit, and using an existing voice does not require extracting a new profile. For an edit, anti-slop-editor returns a quick revision, while slopx also checks substance and facts, lists what the draft is missing, and explains its changes. When combining skills, the assignment and selected voice take precedence over generic cleanup preferences.
 
 ## Install
 
