@@ -158,6 +158,8 @@ def scan(text):
     median = lengths[len(lengths) // 2]
     specifics = (len(found["numbers"]) + len(found["names"])) * 100.0 / words
     dashes = len(re.findall(r"—|\s–\s|\s--\s", prose)) * 1000.0 / words
+    # colons between digits are times or ratios (9:30, 3:1); URLs, code and quotations are already out of prose
+    marks = len(re.findall(r"(?<!\d):(?!\d)|;", QUOTE.sub(" ", prose)))
     labels = len(BOLD_LABEL.findall(prose))
     lines += [
         "",
@@ -165,6 +167,7 @@ def scan(text):
         "  specifics (numbers and names) per 100 words: %.1f%s" % (specifics, "   <- under 1 usually means little is being said (S2)" if specifics < 1 and words >= 50 else ""),
         "  paragraphs: %d, median %d words%s" % (len(paragraphs), median, "   <- many very short paragraphs, see T1" if len(paragraphs) >= 6 and median <= 12 else ""),
         "  dashes used as punctuation per 1,000 words: %.1f%s" % (dashes, "   <- replace each one outside quotations and code, see P10" if dashes > 0 else ""),
+        "  colons and semicolons used as prose punctuation: %d%s" % (marks, "   <- none allowed in social text, see P10" if marks else ""),
         "  bold-label lines: %d%s" % (labels, "   <- see T2" if labels >= 3 else ""),
     ]
     return "\n".join(lines)
@@ -245,6 +248,8 @@ def selftest():
     assert "see T2" in scan("**Speed:** fast.\n**Cost:** low.\n**Risk:** none.")
     assert "see T2" not in scan("**Speed:** fast.")
     assert "announced count" not in scan("We would split again if one of three things happens.")
+    assert "used as prose punctuation: 2" in scan("The lesson: ship smaller; it worked. We met at 9:30, a 3:1 vote.")
+    assert "used as prose punctuation: 0" in scan('We met at 9:30, a 3:1 vote. She said "note: done". See https://x.test/a:b and `a: b`.')
     print("selftest passed")
 
 
