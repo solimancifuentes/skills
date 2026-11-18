@@ -37,7 +37,7 @@ How to use them:
 
 **Empty emphasis (P7):** it's important to note that, it's worth noting that, when it comes to, here's the thing, let that sink in, the truth is
 
-**Announced counts (P7):** here are five lessons, three reasons why, seven things I learned, several key takeaways. Keep the list if the items are real; drop the announcement.
+**Announced counts (P7):** here are five lessons, three reasons why, seven things I learned, several key takeaways. Keep the list if the items are real, and drop the announcement.
 
 **Clerk's voice (P7):** I appreciate your feedback, I have carefully reviewed, I apologize for any inconvenience this may have caused, if there are specific issues please point them out
 

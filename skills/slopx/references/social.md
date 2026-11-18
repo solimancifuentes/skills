@@ -22,6 +22,7 @@ A second test: could a reasonable person disagree with it? If not, the post has 
 ## Shape
 
 - Social posts are plain text. Remove Markdown, and use straight quotation marks (T2, P10).
+- No colons or semicolons as prose punctuation in posts, comments, replies or their drafts (P10). Split the sentence or join the clauses with a comma and a conjunction. "The lesson: ship smaller" becomes "The lesson was to ship smaller." "We missed the date; procurement took 11 weeks" becomes "We missed the date because procurement took 11 weeks." Colons in times (9:30), ratios (3:1), URLs, code and quotations stay.
 - Write paragraphs. A line break is for a change of subject.
 - A real question at the end is fine when the author wants the answer.
 - Keep the author's own turns of phrase. The aim is their post with the filler gone, in their voice.
